@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить пассажира</title>
+    <style>
+        body { font-family: sans-serif; background: #e3edf7; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: white; padding: 30px; border-radius: 15px; width: 350px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        input { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; }
+        .btn-send { width: 100%; padding: 12px; background: #28a745; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+        .btn-back { display: block; text-align: center; margin-top: 15px; color: #1a73e8; text-decoration: none; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Новый пассажир</h2>
+        <br>
+        <!-- ДОБАВИЛИ ID ДЛЯ ФОРМЫ -->
+        <form id="add-passenger-form">
+            <!-- ДОБАВИЛИ ID ДЛЯ КАЖДОГО ПОЛЯ -->
+            <input type="number" id="main_id" placeholder="ID Рейса" required>
+            <input type="text" id="name" placeholder="Имя пассажира" required>
+            <input type="number" id="ticket" placeholder="Стоимость билета" required>
+
+            <!-- Изменили на type="number" и добавили ID -->
+            <input type="number" id="place" min="2" max="49" placeholder="Место (число 2-49)" required>
+
+            <button class="btn-send" type="submit">Сохранить</button>
+        </form>
+
+        <a href="front_n.html" class="btn-back">← Вернуться в меню</a>
+    </div>
+
+    <!-- Подключаем внешний файл JS -->
+    <script src="add_passenger.js"></script>
+
+</body>
+</html>

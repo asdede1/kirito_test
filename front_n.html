@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Управление рейсами</title>
+    <style>
+        /* 1. Сброс отступов */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 2. Центрирование карточки на экране */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e3edf7;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 3. Стили главной карточки */
+        .main_managment {
+            background-color: #ffffff;
+            width: 350px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* 4. Синий контейнер */
+        .choose_d {
+            background-color: #1a73e8;
+            color: #ffffff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .choose_d h2 {
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        /* 5. Красивые кнопки */
+        .btn-action {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #ffffff;
+            color: #1a73e8;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        /* Эффект при наведении на кнопки */
+        .btn-action:hover {
+            background-color: #f1f1f1;
+            transform: translateY(-2px); /* Кнопка слегка приподнимается */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main_managment">
+        <div class="choose_d">
+            <h2>Выберите действие</h2>
+
+            <!-- Кнопка 1 -->
+            <a href = "post_pl.html" class="btn-action">
+                Посмотреть пассажиров на дату
+            </a>
+
+            <!-- Кнопка 2 -->
+            <a href = "get_pl.html" class="btn-action" style="margin-bottom: 0;">
+                Добавить пассажиров
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
+

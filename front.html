@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Посадочный талон</title>
+
+    <!-- CSS стили начинаются здесь -->
+    <style>
+        /* 0. Сброс настроек и включение правильного расчета размеров */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 1. Настройка фона всей страницы и выравнивание КАРТОЧКИ по центру */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e3edf7; /* Нежно-голубой фон */
+            height: 100vh;             /* Высота на весь экран */
+            display: flex;             /* Включаем Flexbox */
+            justify-content: center;    /* Центрируем по горизонтали */
+            align-items: center;        /* Центрируем по вертикали */
+        }
+
+        /* 2. Стили самой КАРТОЧКИ (Box Model в действии) */
+        .ticket-card {
+            background-color: #ffffff;  /* Белый фон карточки */
+            width: 350px;               /* Фиксированная ширина */
+            border-radius: 15px;        /* Красивые скругленные углы */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Мягкая тень */
+            overflow: hidden;           /* Чтобы содержимое не вылезало за скругленные углы */
+        }
+
+        /* 3. Верхняя шапка карточки */
+        .ticket-header {
+            background-color: #1a73e8;  /* Синий цвет авиакомпании */
+            color: #ffffff;             /* Белый текст */
+            padding: 20px;              /* Внутренние отступы */
+            text-align: center;         /* Текст по центру */
+        }
+
+        .ticket-header h2 {
+            font-size: 20px;
+            margin-bottom: 5px;         /* Отступ снизу от заголовка */
+        }
+
+        .ticket-header p {
+            font-size: 14px;
+            opacity: 0.8;               /* Слегка прозрачный текст */
+        }
+
+        /* 4. Тело карточки (где лежат данные пассажира) */
+        .ticket-body {
+            padding: 25px;              /* Внутренние отступы */
+        }
+
+        /* Строка с данными */
+        .info-row {
+            display: flex;              /* Снова Flexbox, чтобы выровнять Текст слева и справа */
+            justify-content: space-between; /* Растолкать текст по краям */
+            margin-bottom: 15px;        /* Расстояние между строками */
+            border-bottom: 1px dashed #e0e0e0; /* Пунктирная линия-разделитель */
+            padding-bottom: 8px;
+        }
+
+        /* Левая часть строки (подпись) */
+        .label {
+            color: #7f8c8d;             /* Серый цвет */
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Правая часть строки (значение из базы) */
+        .value {
+            color: #2c3e50;             /* Темно-синий/черный цвет */
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        /* 5. Стильная кнопка внизу */
+        .btn-action {
+            display: block;             /* Делаем кнопку блочной, чтобы применить ширину */
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;  /* Зеленый цвет */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;            /* Курсор-палец */
+            margin-top: 10px;           /* Отступить сверху */
+            transition: 0.2s;           /* Плавный переход для эффекта наведения */
+        }
+
+        /* Эффект при наведении мышки на кнопку */
+        .btn-action:hover {
+            background-color: #218838;  /* Зеленый становится темнее */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HTML Структура нашей карточки -->
+    <div class="ticket-card">
+
+        <!-- Шапка -->
+        <div class="ticket-header">
+            <h2>✈️ BOARDING PASS</h2>
+            <p>Рейс № SU-2104</p>
+        </div>
+
+        <!-- Тело с данными -->
+        <div class="ticket-body">
+
+            <div class="info-row">
+                <span class="label">Пассажир:</span>
+                <span class="value">Иван Иванов</span>
+            </div>
+
+            <div class="info-row">
+                <span class="label">Номер билета:</span>
+                <span class="value">25004509</span>
+            </div>
+
+            <div class="info-row">
+                <span class="label">Место:</span>
+                <span class="value" style="color: #1a73e8;">12A</span> <!-- Покрасим место в синий отдельно -->
+            </div>
+
+            <div class="info-row" style="border-bottom: none;"> <!-- Уберем последнюю пунктирную линию -->
+                <span class="label">Класс:</span>
+                <span class="value">Эконом</span>
+            </div>
+
+            <!-- Кнопка -->
+            <button class="btn-action">Зарегистрирован</button>
+
+
+
+
+
+        </div>
+    </div>
+
+</body>
+</html>
